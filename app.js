@@ -27,6 +27,11 @@ mongoose
     .then(() => console.log('DB Connected'));
 
 // middlewares
+
+app.get("/",(req,res)=>{
+    res.send({msg:"hello world"})
+})
+
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(cookieParser());
